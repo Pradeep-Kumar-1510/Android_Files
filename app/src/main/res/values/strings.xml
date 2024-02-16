@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">First app</string>
+    <string name="Welcome">Sample App </string>
+    <string name="use">Sign in</string>
+    <string name="Terms">I am new user and I know that this page does not save my user name and password
+    credentials as the default user name and password validation is set to admin. This is purely for testing purpose.</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="or_sign_in_with">or sign in with</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="registernew">Register</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="greetings">Welcome User</string>
+    <string name="admin">Admin</string>
+    <string name="name">Name</string>
+    <string name="hi_there">Hi there, Good to see you back!</string>
+    <string name="meeting">Click on the below buttons to navigate to the respective pages.</string>
+    <string name="home">Home</string>
+    <string name="Grid_view">Grid_View</string>
+    <string name="grid_view_example">Grid View Example</string>
+    <string name="lbtn">List_View</string>
+    <string name="go_back">Go back</string>
+    <string name="Explore">Explore</string>
+    <string name="Recycle">R_View</string>
+    <string name="menu_welcome">Welcome to menu page click the tree dots to go through the options available </string>
+    <string name="feed_back">Feedback</string>
+    <string name="about_us">About Us</string>
+    <string name="help">Help</string>
+    <string name="menu">Menu</string>
+    <string name="lifecycle">Welcome to help section here you can view the Lifecycle of the activity</string>
+    <string name="your_title">Your Title</string>
+    <string name="icon">Icon</string>
+    <string name="feed_welcome">Submit your feedback</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rate_us">Rate us</string>
+    <string name="get_rating">Get Rating</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="enter_your_feedback_here">Enter your feedback here</string>
+    <string name="feedbacks_subitted">Feedbacks Submitted</string>
+    <string name="feedbacks">Feedbacks</string>
+    <string name="view_feedbacks">View Feedbacks</string>
+    <string name="broadcast">click to start broadcast</string>
+    <string name="broadcast_title">Broadcast</string>
+    <string name="services">Services</string>
+    <string name="start_services">Start Services</string>
+    <string name="example_of_services">Example of services</string>
+    <string name="stop_services">Stop Services</string>
+</resources>

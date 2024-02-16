@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MenuActivity"
+    android:background="@drawable/bgcolor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_welcome"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:background="@color/white"
+        android:layout_marginTop="250dp"
+        android:padding="20dp"
+        android:id="@+id/t1"/>
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/go_back"
+        android:textColor="#0863D1"
+        android:layout_below="@+id/t1"
+        android:layout_marginStart="150dp"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="#00BCD4"
+        android:title="@string/your_title"
+        app:titleTextColor="@color/black"/>
+</RelativeLayout>

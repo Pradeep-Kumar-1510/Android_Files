@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feedbackAction"
+        android:title="@string/feed_back" />
+
+
+    <item
+        android:id="@+id/aboutAction"
+        android:title="@string/about_us" />
+
+    <item
+        android:id="@+id/helpAction"
+        android:title="@string/help" />
+    <item
+        android:id="@+id/viewFeedbacks"
+        android:title="@string/view_feedbacks" />
+    <item
+        android:id="@+id/broadcast"
+        android:title="@string/broadcast_title"/>
+
+    <item
+        android:id="@+id/service"
+        android:title="@string/services"/>
+
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FormFragment"
+    android:background="@drawable/bgcolor2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feed_welcome"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <EditText
+        android:id="@+id/feedbackEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/enter_your_feedback_here"
+        android:minHeight="48dp"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/submitFeedbackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feedbackEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="@string/submit_feedback"
+        />
+
+</RelativeLayout>
