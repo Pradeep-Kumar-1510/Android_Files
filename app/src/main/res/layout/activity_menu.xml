@@ -30,6 +30,18 @@
         android:layout_below="@+id/t1"
         android:layout_marginStart="150dp"/>
 
+    <Button
+        android:id="@+id/storageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/view_storage"
+        android:textColor="#0863D1"
+        android:layout_below="@+id/t1"
+        android:layout_marginStart="135dp"/>
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -38,4 +50,5 @@
         android:background="#00BCD4"
         android:title="@string/your_title"
         app:titleTextColor="@color/black"/>
+
 </RelativeLayout>

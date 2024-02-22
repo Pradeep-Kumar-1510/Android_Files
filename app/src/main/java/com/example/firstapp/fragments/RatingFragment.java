@@ -13,29 +13,24 @@ import com.example.firstapp.R;
 
 public class RatingFragment extends Fragment {
 
-    private View view;
     private RatingBar ratingBar;
-    private Button rateButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_rating, container, false);
+        View view = inflater.inflate(R.layout.fragment_rating, container, false);
 
 
         ratingBar = view.findViewById(R.id.ratingBar);
-        rateButton = view.findViewById(R.id.rateBtn);
+        Button rateButton = view.findViewById(R.id.rateBtn);
 
 
-        rateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Getting the rating value from the rating bar
-                float rating = ratingBar.getRating();
+        rateButton.setOnClickListener(v -> {
+            // Getting the rating value from the rating bar
+            float rating = ratingBar.getRating();
 
-                // Display a toast message with the rating
-                Toast.makeText(getActivity(), "You rated us: " + rating, Toast.LENGTH_SHORT).show();
-            }
+            // Display a toast message with the rating
+            Toast.makeText(getActivity(), "You rated us: " + rating, Toast.LENGTH_SHORT).show();
         });
 
         return view;

@@ -8,12 +8,10 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.appcompat.widget.Toolbar;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import com.example.firstapp.fragments.AboutUsFragment;
 import com.example.firstapp.R;
 import com.example.firstapp.services.ServiceActivity;
 
@@ -25,12 +23,21 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         Button backButton = findViewById(R.id.backButton);
+        Button storageButton = findViewById(R.id.storageButton);
 
         backButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, HomePageActivity.class);
             startActivity(i);
             Toast.makeText(MenuActivity.this, "You are in Menu Page", Toast.LENGTH_SHORT).show();
         });
+
+
+        storageButton.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, StorageActivity.class);
+            startActivity(i);
+            Toast.makeText(MenuActivity.this, "You are in Menu Page", Toast.LENGTH_SHORT).show();
+        });
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,11 +58,6 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(MenuActivity.this, FeedbackActivity.class);
             startActivity(intent);
             Toast.makeText(this, "You are in feedback page", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (itemId == R.id.aboutAction) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new AboutUsFragment()).addToBackStack(null).commit();
-            Toast.makeText(this, "You are in About page", Toast.LENGTH_SHORT).show();
             return true;
         } else if (itemId == R.id.helpAction) {
             Intent intent = new Intent(MenuActivity.this, LifeCycleActivity.class);

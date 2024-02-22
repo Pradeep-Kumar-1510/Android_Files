@@ -34,6 +34,7 @@ public class GridAdapter extends ArrayAdapter<GridModel> {
         TextView courseTV = listitemView.findViewById(R.id.TVCourse);
         ImageView courseIV = listitemView.findViewById(R.id.IVCourse);
 
+        assert gridModel != null;
         courseTV.setText(gridModel.getFruit_name());
         courseIV.setImageResource(gridModel.getImg_id());
         return listitemView;

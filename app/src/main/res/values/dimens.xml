@@ -3,4 +3,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="ic_clear_margin">56dp</dimen>
+    <dimen name="_150dp">150dp</dimen>
+    <dimen name="_130dp">130dp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_500dp">500dp</dimen>
+    <dimen name="_400dp">400dp</dimen>
 </resources>

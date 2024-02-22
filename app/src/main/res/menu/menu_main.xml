@@ -5,11 +5,6 @@
         android:id="@+id/feedbackAction"
         android:title="@string/feed_back" />
 
-
-    <item
-        android:id="@+id/aboutAction"
-        android:title="@string/about_us" />
-
     <item
         android:id="@+id/helpAction"
         android:title="@string/help" />

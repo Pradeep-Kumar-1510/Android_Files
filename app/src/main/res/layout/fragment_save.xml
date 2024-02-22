@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgcolor"
+    tools:context=".fragments.SaveFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/shared_preference_example"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@string/shp_details"
+        android:layout_marginTop="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_130dp"
+        android:background="@drawable/bgcolor2"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            tools:ignore="UselessParent">
+
+            <TableRow>
+
+                <!-- First column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:text="@string/username"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:drawableStartCompat="@drawable/baseline_person_24" />
+
+                <!-- Second column -->
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:autofillHints="username"
+                    android:hint="@string/enter_username"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/usernameErrorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:visibility="gone"/>
+
+            </TableRow>
+
+
+
+            <!-- Third row -->
+            <TableRow>
+
+                <!-- First column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:text="@string/phone_number"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:drawableStartCompat="@drawable/baseline_person_24" />
+
+                <!-- Second column -->
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:autofillHints="phone"
+                    android:hint="@string/enter_mobile_no"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    tools:ignore="TextFields" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/numberErrorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:visibility="gone"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_400dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/save"
+            android:textColor="#00838F"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/btnDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/view_details"
+            android:textColor="#00838F"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/clear"
+            android:textColor="#00838F"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+</FrameLayout>

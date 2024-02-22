@@ -24,13 +24,6 @@ public class FeedbackActivity extends AppCompatActivity {
         Button ratingButton = findViewById(R.id.frag1btn);
         Button formButton = findViewById(R.id.frag2btn);
 
-//        backButton.setOnClickListener(v -> {
-//            Intent i = new Intent(FeedbackActivity.this, MenuActivity.class);
-//            startActivity(i);
-//            Toast.makeText(FeedbackActivity.this, "You are in Menu Page", Toast.LENGTH_SHORT).show();
-//        });
-
-
         formButton.setOnClickListener(v -> replaceFragment(new FormFragment()));
 
 

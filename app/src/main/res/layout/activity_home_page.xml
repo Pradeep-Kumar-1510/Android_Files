@@ -28,98 +28,120 @@
         tools:ignore="ContentDescription"
         android:layout_marginStart="150dp"/>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="90dp"-->
-<!--            android:layout_height="98dp"-->
-<!--            android:padding="20dp"-->
-<!--            android:src="@drawable/baseline_person_24"-->
-<!--            tools:ignore="ContentDescription" />-->
-<!--    </LinearLayout>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bgcolor2"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:stretchColumns="*">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:paddingStart="40dp"
-                android:paddingEnd="20dp"
-                android:text="@string/name"
-                android:textStyle="bold|italic"
-                android:textSize="14sp" />
+            <TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:paddingStart="100dp"
-                android:paddingEnd="20dp"
-                android:text="@string/admin"
-                android:textStyle="bold|italic"
-                android:textSize="14sp" />
-        </LinearLayout>
+                <!-- First column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/username"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:drawableStartCompat="@drawable/baseline_person_24"
+                    android:layout_weight="1" />
 
-        <LinearLayout
+                <!-- Second column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/username"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    android:layout_weight="1"
+                    android:id="@+id/username"/>
+
+            </TableRow>
+
+            <!-- Second row -->
+            <TableRow>
+
+                <!-- First column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/password"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:drawableStartCompat="@drawable/baseline_person_24"
+                    android:layout_weight="1" />
+
+                <!-- Second column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/password"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    android:layout_weight="1"
+                    android:id="@+id/password"/>
+
+            </TableRow>
+
+<!--            Third Row -->
+            <TableRow>
+
+                <!-- First column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/role"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:drawableStartCompat="@drawable/baseline_person_24"
+                    android:layout_weight="1" />
+
+                <!-- Second column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/password"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    android:layout_weight="1"
+                    android:id="@+id/role"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:paddingStart="30dp"
-                android:paddingEnd="20dp"
-                android:text="@string/password"
-                android:textStyle="bold|italic"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:paddingStart="100dp"
-                android:paddingEnd="20dp"
-                android:text="@string/admin"
-                android:textStyle="bold|italic"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:text="@string/hi_there"
-                android:textColor="#730632"
-                android:textStyle="italic|bold"
-                android:textSize="14sp"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:padding="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/hi_there"
+            android:textColor="#730632"
+            android:textStyle="italic|bold"
+            android:textSize="14sp"
+            />
 
             <TextView
                 android:layout_width="match_parent"
@@ -129,75 +151,24 @@
                 android:text="@string/meeting"
                 android:textAlignment="center"
                 android:textStyle="italic"
-                android:textSize="14sp" />
-        </LinearLayout>
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+    <TextView
+        android:id="@+id/popup_textview"
+        android:layout_width="@dimen/_150dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_130dp"
+        android:layout_marginBottom="@dimen/_50dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:text="@string/click_for_pop_up_menu"
+        android:textColor="#064AAF"
+        android:textSize="@dimen/_14sp"
+        tools:ignore="TextSizeCheck" />
 
-        <Button
-            android:id="@+id/homebtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="10dp"
-            android:layout_height="83dp"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/home"
-            android:textColor="#0C40DD"
-            android:textSize="14sp"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:ignore="NestedWeights" />
-
-        <Button
-            android:id="@+id/nextbtn"
-            android:layout_width="20dp"
-            android:layout_height="83dp"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/Grid_view"
-            android:textSize="14sp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#0C40DD"/>
-
-        <Button
-            android:id="@+id/ListBtn"
-            android:layout_width="20dp"
-            android:layout_height="83dp"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/lbtn"
-            android:textSize="14sp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#0C40DD"/>
-
-        <Button
-            android:id="@+id/r_viewBtn"
-            android:layout_width="20dp"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/Recycle"
-            android:textSize="14sp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#0C40DD"/>
-
-        <Button
-            android:id="@+id/menuBtn"
-            android:layout_width="10dp"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/menu"
-            android:textSize="14sp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#0C40DD"/>
-    </LinearLayout>
 </LinearLayout>
