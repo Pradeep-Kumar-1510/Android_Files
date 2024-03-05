@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -17,6 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.ApiActivity"
+            android:exported="false"
+            android:process=":api"
+            android:label="@string/api_process"/>
         <activity
             android:name=".activity.StorageActivity"
             android:exported="false" />
@@ -66,8 +72,7 @@
             android:name=".activity.BroadcastActivity"
             android:exported="true" />
 
-        <service android:name=".MyService" />
-
+        <service android:name=".POJOClass.MyService" />
     </application>
 
 </manifest>

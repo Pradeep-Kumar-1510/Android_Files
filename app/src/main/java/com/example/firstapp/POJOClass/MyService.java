@@ -1,4 +1,4 @@
-package com.example.firstapp;
+package com.example.firstapp.POJOClass;
 
 import android.app.Service;
 import android.content.Intent;

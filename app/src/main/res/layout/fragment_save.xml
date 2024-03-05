@@ -8,6 +8,21 @@
     tools:context=".fragments.SaveFragment">
 
 
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_500dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/go_back"
+        android:textColor="#0288D1"
+        android:textSize="20sp"
+        />
+
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -159,7 +174,7 @@
             android:id="@+id/btnDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/_20dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/white"
             android:text="@string/view_details"

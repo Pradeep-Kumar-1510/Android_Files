@@ -51,9 +51,9 @@ public class InternalDetailsFragment extends Fragment {
                 Scanner scanner = new Scanner(fin);
 
                 if (scanner.hasNextLine()) {
-                    String name = scanner.nextLine(); // Read the name
+                    String name = scanner.nextLine(); // Reading the name
                     if (scanner.hasNextLine()) {
-                        String number = scanner.nextLine(); // Read the number
+                        String number = scanner.nextLine(); // Reading the number
                         user.setText(name);
                         phone.setText(number);
                     }

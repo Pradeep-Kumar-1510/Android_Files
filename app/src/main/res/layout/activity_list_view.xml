@@ -10,18 +10,23 @@
 
     <ListView
         android:id="@+id/List_views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@color/white"
+        android:layout_weight="1"
+        android:dividerHeight="2sp"
+        android:listSelector="@color/buttonbg2"
+        android:layout_marginTop="@dimen/_30dp" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:backgroundTint="@color/white"
         android:onClick="goBackOnClick"
         android:text="@string/go_back"
-        android:backgroundTint="@color/white"
-        android:textColor="#2196F3"/>
+        android:textColor="#1976D2" />
 
 
 </LinearLayout>

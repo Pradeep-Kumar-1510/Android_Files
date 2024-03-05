@@ -6,7 +6,7 @@
     tools:context=".fragments.RatingFragment"
     android:background="#E3CD0B">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,13 +16,14 @@
         android:layout_marginStart="150dp"/>
 
     <RatingBar
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="@dimen/_300dp"
         android:numStars="5"
         android:saveEnabled="true"
         android:id="@+id/ratingBar"
-        android:rating="0"/>
+        android:rating="0"
+        android:layout_marginStart="@dimen/_90dp"/>
 
     <Button
         android:layout_width="wrap_content"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/Sample2">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/view_jokes"
+        android:textColor="#424242"
+        android:textSize="@dimen/_30sp" />
+
+
+    <Button
+        android:id="@+id/btn_joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_joke"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150dp"
+        android:text=""
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/white"
+        />
+
+    <ProgressBar
+        android:id="@+id/LoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_50dp"/>
+
+</FrameLayout>

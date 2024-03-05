@@ -60,7 +60,7 @@
     <string name="gmail_button">gmail button</string>
     <string name="twitter_button">twitter button</string>
     <string name="facebook_button">facebook button</string>
-    <string name="external_storage">In this fragment we are yet to implement external storage</string>
+    <string name="external_storage">External Storage Example</string>
     <string name="internal_storage">In this example, user\'s name and mobile number are saved in a file inside the data folder and when you click view details, the stored data are fetched in a replaced fragment layout.</string>
     <string name="shared_preference">shared preference</string>
     <string name="int_storage">internal storage</string>
@@ -69,4 +69,27 @@
     <string name="role">Role</string>
     <string name="no_data_available">No data available</string>
     <string name="no_number_available">No number available</string>
+    <string name="enter_data_you_want_to_save">Enter data you want to save</string>
+    <string name="internal_cache">Internal Cache</string>
+    <string name="external_cache">External Cache</string>
+    <string name="external_public">External Public</string>
+    <string name="external_private">External Private</string>
+    <string name="click_the_buttons_to_load_the_data_present_there">Click the buttons to load the data present there</string>
+    <string name="weather_api">Weather Api</string>
+    <string name="map_api">Map Api</string>
+    <string name="view_api">View Api</string>
+    <string name="api_process">api_process</string>
+    <string name="image">image</string>
+    <string name="view_jokes">View jokes</string>
+    <string name="jokes">Jokes :</string>
+    <string name="get_joke">Get Joke</string>
+    <string name="threads">Threads</string>
+    <string name="Get_api_link">https://api.chucknorris.io/</string>
+    <string name="failed_to_fetch_joke">Failed to fetch joke</string>
+    <string name="enter_your_mail_address">Enter your mail address</string>
+    <string name="send_data">Send data</string>
+    <string name="data_received_is">Data received is</string>
+    <string name="post_api_and_threads">Post Api and Threads</string>
+    <string name="error_found_is">"Error found is : "</string>
+    <string name="response_code">"Response Code : "</string>
 </resources>

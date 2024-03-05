@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.firstapp.adapters.CustomAdapter;
 import com.example.firstapp.R;
-import com.example.firstapp.adapters.Recycler_data;
+import com.example.firstapp.adapters.CustomAdapter;
+import com.example.firstapp.adapters.RecyclerItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
@@ -16,25 +19,29 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        Recycler_data[] myListData = new Recycler_data[]{
-                new Recycler_data("Email", android.R.drawable.ic_dialog_email),
-                new Recycler_data("Info", android.R.drawable.ic_dialog_info),
-                new Recycler_data("Delete", android.R.drawable.ic_delete),
-                new Recycler_data("Dialer", android.R.drawable.ic_dialog_dialer),
-                new Recycler_data("Alert", android.R.drawable.ic_dialog_alert),
-                new Recycler_data("Map", android.R.drawable.ic_dialog_map),
-                new Recycler_data("Email", android.R.drawable.ic_dialog_email),
-                new Recycler_data("Info", android.R.drawable.ic_dialog_info),
-                new Recycler_data("Delete", android.R.drawable.ic_delete),
-                new Recycler_data("Dialer", android.R.drawable.ic_dialog_dialer),
-                new Recycler_data("Alert", android.R.drawable.ic_dialog_alert),
-                new Recycler_data("Map", android.R.drawable.ic_dialog_map),
-        };
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        CustomAdapter adapter = new CustomAdapter(myListData);
-       recyclerView.setHasFixedSize(false);
+        List<RecyclerItem> items = new ArrayList<>();
+        items.add(new RecyclerItem("Email", android.R.drawable.ic_dialog_email, "Send Email"));
+        items.add(new RecyclerItem("Info", android.R.drawable.ic_dialog_info, "Check Information"));
+        items.add(new RecyclerItem("Alert", android.R.drawable.ic_dialog_alert, "Raise alert"));
+        items.add(new RecyclerItem("Dialer", android.R.drawable.ic_dialog_dialer, "Dial someone"));
+        items.add(new RecyclerItem("Map", android.R.drawable.ic_dialog_map, "Check location"));
+        items.add(new RecyclerItem("Delete", android.R.drawable.ic_delete, "Delete details"));
+        items.add(new RecyclerItem("Email", android.R.drawable.ic_dialog_email, "Send Email"));
+        items.add(new RecyclerItem("Info", android.R.drawable.ic_dialog_info, "Check Information"));
+        items.add(new RecyclerItem("Alert", android.R.drawable.ic_dialog_alert, "Raise alert"));
+        items.add(new RecyclerItem("Dialer", android.R.drawable.ic_dialog_dialer, "Dial someone"));
+        items.add(new RecyclerItem("Map", android.R.drawable.ic_dialog_map, "Check location"));
+        items.add(new RecyclerItem("Email", android.R.drawable.ic_dialog_email, "Send Email"));
+        items.add(new RecyclerItem("Info", android.R.drawable.ic_dialog_info, "Check Information"));
+        items.add(new RecyclerItem("Alert", android.R.drawable.ic_dialog_alert, "Raise alert"));
+        items.add(new RecyclerItem("Dialer", android.R.drawable.ic_dialog_dialer, "Dial someone"));
+        items.add(new RecyclerItem("Map", android.R.drawable.ic_dialog_map, "Check location"));
+
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(new CustomAdapter(this, items));
     }
+
 }

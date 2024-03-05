@@ -1,7 +1,7 @@
 package com.example.firstapp.fragments;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.firstapp.R;
+import com.example.firstapp.activity.MenuActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -47,6 +48,14 @@ public class InternalStorageFragment extends Fragment {
         EditText phoneNumber = view.findViewById(R.id.phone);
         TextView errorName = view.findViewById(R.id.usernameErrorTextView);
         TextView errorNumber = view.findViewById(R.id.numberErrorTextView);
+        Button btnBack = view.findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), MenuActivity.class);
+            startActivity(intent);
+            Toast.makeText(getContext(), "You are in Menu Page", Toast.LENGTH_SHORT).show();
+        });
+
 
         btnDetails.setOnClickListener(v -> {
             getParentFragmentManager().beginTransaction()

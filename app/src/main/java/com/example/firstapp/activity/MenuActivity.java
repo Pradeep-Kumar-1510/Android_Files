@@ -24,11 +24,20 @@ public class MenuActivity extends AppCompatActivity {
 
         Button backButton = findViewById(R.id.backButton);
         Button storageButton = findViewById(R.id.storageButton);
+        Button apiButton = findViewById(R.id.btnApi);
+
 
         backButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, HomePageActivity.class);
             startActivity(i);
-            Toast.makeText(MenuActivity.this, "You are in Menu Page", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MenuActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
+        });
+
+
+        apiButton.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, ApiActivity.class);
+            startActivity(i);
+            Toast.makeText(MenuActivity.this, "You are in Api Page", Toast.LENGTH_SHORT).show();
         });
 
 

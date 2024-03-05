@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.firstapp.MyService;
+import com.example.firstapp.POJOClass.MyService;
 import com.example.firstapp.R;
 import com.example.firstapp.activity.MenuActivity;
 
