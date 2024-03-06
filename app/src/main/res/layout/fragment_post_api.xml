@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/pink"
-        android:text="@string/post_api_and_threads"
+        android:text="@string/post_api"
         android:textSize="@dimen/_30sp"
         android:textAlignment="center"
         android:layout_marginTop="@dimen/_20dp"
