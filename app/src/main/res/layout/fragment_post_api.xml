@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PostApiFragment"
+    tools:context=".api.retrofitPostApi.PostApiFragment"
     android:background="@drawable/background_color"
     android:orientation="vertical">
 

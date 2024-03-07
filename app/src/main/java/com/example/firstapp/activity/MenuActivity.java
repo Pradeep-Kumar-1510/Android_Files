@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.firstapp.R;
-import com.example.firstapp.services.ServiceActivity;
+import com.example.firstapp.api.ApiActivity;
+import com.example.firstapp.broadcastFiles.BroadcastActivity;
+import com.example.firstapp.services.backgroundService.ServiceActivity;
+import com.example.firstapp.storage.StorageActivity;
 
 public class MenuActivity extends AppCompatActivity {
 

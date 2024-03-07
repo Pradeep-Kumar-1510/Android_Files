@@ -80,7 +80,7 @@
     <string name="view_api">View Api</string>
     <string name="api_process">api_process</string>
     <string name="image">image</string>
-    <string name="view_jokes">View jokes</string>
+    <string name="view_jokes">Jokes</string>
     <string name="jokes">Jokes :</string>
     <string name="get_joke">Get Joke</string>
     <string name="threads">Threads</string>
@@ -94,4 +94,7 @@
     <string name="response_code">"Response Code : "</string>
     <string name="threads_and_foreground_service">Threads and Foreground Service</string>
     <string name="foreground_brief">In this fragment when the button is toggled forground service and threads are started while the threads continue to run the sounds sequentially in background,A foreground notification is enabled until the user toggles the button to stop both background and foreground services.</string>
+    <string name="api_methods">API Methods</string>
+    <string name="other_api_methods">Other Api Methods</string>
+    <string name="code">"Code: "</string>
 </resources>

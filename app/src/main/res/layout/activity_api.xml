@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ApiActivity">
+    tools:context=".api.ApiActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
@@ -34,6 +34,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/threads"
             android:text="@string/threads"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/put"
+            android:text="@string/api_methods"/>
 
 
     </com.google.android.material.tabs.TabLayout>

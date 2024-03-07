@@ -31,7 +31,8 @@
         android:inputType="textAutoComplete"
         android:padding="15dp"
         android:textColorHint="#B71C1C"
-        app:drawableStartCompat="@drawable/baseline_person_24" />
+        app:drawableStartCompat="@drawable/baseline_person_24"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/usernameErrorTextView"
@@ -57,7 +58,8 @@
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColorHint="#B71C1C"
-        app:drawableStartCompat="@drawable/baseline_password_24" />
+        app:drawableStartCompat="@drawable/baseline_password_24"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/passwordErrorTextView"

@@ -11,6 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.firstapp.R;
+import com.example.firstapp.views.gridView.GridViewActivity;
+import com.example.firstapp.views.listView.ListViewActivity;
+import com.example.firstapp.views.recyclerView.RecyclerViewActivity;
 
 public class HomePageActivity extends AppCompatActivity {
 

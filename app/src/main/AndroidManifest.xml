@@ -22,15 +22,15 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ApiActivity"
+            android:name=".api.ApiActivity"
             android:exported="false"
             android:label="@string/api_process"
             android:process=":api" />
         <activity
-            android:name=".activity.StorageActivity"
+            android:name=".storage.StorageActivity"
             android:exported="false" />
         <activity
-            android:name=".services.ServiceActivity"
+            android:name=".services.backgroundService.ServiceActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ViewFeedbackActivity"
@@ -45,13 +45,13 @@
             android:name=".activity.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.RecyclerViewActivity"
+            android:name=".views.recyclerView.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ListViewActivity"
+            android:name=".views.listView.ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.GridViewActivity"
+            android:name=".views.gridView.GridViewActivity"
             android:exported="false" />
         <activity
             android:name=".activity.HomePageActivity"
@@ -72,13 +72,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.BroadcastActivity"
+            android:name=".broadcastFiles.BroadcastActivity"
             android:exported="true" />
 
-        <service android:name=".POJOClass.MyService" />
+        <service android:name=".services.backgroundService.MyService" />
 
         <service
-            android:name=".POJOClass.ForegroundService"
+            android:name=".services.foregroundService.ForegroundService"
             android:foregroundServiceType="location|dataSync|mediaPlayback" />
 
 
