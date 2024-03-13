@@ -2,7 +2,9 @@ package com.example.firstapp.services.backgroundService;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -13,28 +15,56 @@ import com.example.firstapp.activity.MenuActivity;
 
 public class ServiceActivity extends AppCompatActivity {
 
+    //@Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_service);
+//        Button btn_Back = findViewById(R.id.btn_Back);
+//
+//
+//        btn_Back.setOnClickListener(v -> {
+//            Intent i = new Intent(ServiceActivity.this, MenuActivity.class);
+//            startActivity(i);
+//            Toast.makeText(ServiceActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
+//        });
+//
+//    }
+//
+//    public void startService(View view) {
+//        startService(new Intent(getBaseContext(), MyService.class));
+//    }
+//
+//    // Method to stop the service
+//    public void stopService(View view) {
+//        stopService(new Intent(getBaseContext(), MyService.class));
+//    }
+
+    private Intent serviceIntent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-        Button btn_Back = findViewById(R.id.btn_Back);
 
+        Button btnStart = findViewById(R.id.btnStart);
+        Button btnStop = findViewById(R.id.btnStop);
 
-        btn_Back.setOnClickListener(v -> {
-            Intent i = new Intent(ServiceActivity.this, MenuActivity.class);
-            startActivity(i);
-            Toast.makeText(ServiceActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
-        });
+        btnStart.setOnClickListener(v -> startMusicService());
 
+        btnStop.setOnClickListener(v -> stopMusicService());
     }
 
-    public void startService(View view) {
-        startService(new Intent(getBaseContext(), MyService.class));
+    private void startMusicService() {
+        if (serviceIntent == null) {
+            serviceIntent = new Intent(this, MyService.class);
+            startService(serviceIntent);
+        }
     }
 
-    // Method to stop the service
-    public void stopService(View view) {
-        stopService(new Intent(getBaseContext(), MyService.class));
+    private void stopMusicService() {
+        if (serviceIntent != null) {
+            stopService(serviceIntent);
+            serviceIntent = null;
+        }
     }
-
 }

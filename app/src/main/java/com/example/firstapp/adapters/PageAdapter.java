@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.firstapp.api.retrofitGetApi.JokeApiFragment;
 import com.example.firstapp.api.retrofitApiMethods.ApiMethodsFragment;
-import com.example.firstapp.fragments.MapFragment;
+import com.example.firstapp.fragments.CameraFragment;
 import com.example.firstapp.api.retrofitPostApi.PostApiFragment;
 import com.example.firstapp.services.foregroundService.ThreadFragment;
 
@@ -22,7 +22,7 @@ public class PageAdapter extends FragmentStateAdapter {
         if (position == 0) {
             return new PostApiFragment();
         } else if (position == 1) {
-            return new MapFragment();
+            return new CameraFragment();
         } else if (position == 2) {
             return new JokeApiFragment();
         } else if (position == 3) {

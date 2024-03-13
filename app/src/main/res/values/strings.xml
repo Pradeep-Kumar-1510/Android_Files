@@ -97,4 +97,17 @@
     <string name="api_methods">API Methods</string>
     <string name="other_api_methods">Other Api Methods</string>
     <string name="code">"Code: "</string>
+    <string name="camera_desc">This is an example for the Camera. Click the button to start the camera. Dont forget to say cheese while taking the picture.</string>
+    <string name="capture">Capture</string>
+    <string name="apiLink">https://jsonplaceholder.typicode.com/</string>
+    <string name="get_data">Get Data</string>
+    <string name="post_data">Post Data</string>
+    <string name="update_data">Update Data</string>
+    <string name="delete_data">Delete Data</string>
+    <string name="enter_id">Enter Id</string>
+    <string name="enter_user_id">Enter UserId</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_body">Enter Body</string>
+    <string name="submit">Submit</string>
+    <string name="camera">Camera</string>
 </resources>
