@@ -2,9 +2,6 @@ package com.example.firstapp.services.backgroundService;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -48,10 +45,18 @@ public class ServiceActivity extends AppCompatActivity {
 
         Button btnStart = findViewById(R.id.btnStart);
         Button btnStop = findViewById(R.id.btnStop);
+        Button btn_Back = findViewById(R.id.btn_Back);
+
 
         btnStart.setOnClickListener(v -> startMusicService());
 
         btnStop.setOnClickListener(v -> stopMusicService());
+
+        btn_Back.setOnClickListener(v -> {
+            Intent i = new Intent(ServiceActivity.this, MenuActivity.class);
+            startActivity(i);
+            Toast.makeText(ServiceActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void startMusicService() {

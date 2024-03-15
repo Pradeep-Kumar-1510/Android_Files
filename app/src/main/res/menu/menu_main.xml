@@ -6,8 +6,8 @@
         android:title="@string/feed_back" />
 
     <item
-        android:id="@+id/helpAction"
-        android:title="@string/help" />
+        android:id="@+id/mapAction"
+        android:title="@string/view_map" />
     <item
         android:id="@+id/viewFeedbacks"
         android:title="@string/view_feedbacks" />

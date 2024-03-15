@@ -1,4 +1,4 @@
-package com.example.firstapp.mapImplemetations;
+package com.example.firstapp.maps;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

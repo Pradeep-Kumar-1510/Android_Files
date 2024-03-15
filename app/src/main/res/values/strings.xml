@@ -110,4 +110,16 @@
     <string name="enter_body">Enter Body</string>
     <string name="submit">Submit</string>
     <string name="camera">Camera</string>
+    <string name="my_map_api_key">AIzaSyAw8ut92DR7FW2KM85PYoIy08OxENI6aZM</string>
+    <string name="view_map">View Map</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="enter_start_location">Enter Start Location</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="show_route">Show Route</string>
+    <string name="scan_cancelled">Scan Cancelled</string>
+    <string name="scan_prompt">Scan now</string>
+    <string name="scan_result">Scan Result</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="scan_qr">Scan QR</string>
 </resources>

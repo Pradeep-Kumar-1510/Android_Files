@@ -1,4 +1,4 @@
-package com.example.firstapp.fragments;
+package com.example.firstapp.camera;
 
 import android.Manifest;
 import android.app.Activity;

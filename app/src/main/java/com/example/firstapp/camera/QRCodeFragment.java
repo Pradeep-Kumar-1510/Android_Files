@@ -1,4 +1,4 @@
-package com.example.firstapp.api.BlankPackage;
+package com.example.firstapp.camera;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,14 +15,14 @@ import com.example.firstapp.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class BlankFragment extends Fragment {
+public class QRCodeFragment extends Fragment {
 
     private TextView txtResult;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        View view = inflater.inflate(R.layout.fragment_qr_code, container, false);
 
         Button btnScan = view.findViewById(R.id.btnScan);
         txtResult = view.findViewById(R.id.txtResult);

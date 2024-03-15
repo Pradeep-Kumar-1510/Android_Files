@@ -4,69 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
+    android:background="@drawable/background_color"
     tools:context=".activity.MenuActivity">
 
     <TextView
         android:id="@+id/t1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:background="@color/white"
+        android:layout_marginTop="@dimen/_100dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:padding="20dp"
         android:text="@string/menu_welcome"
         android:textColor="@color/black"
-        android:textStyle="bold|italic" />
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/_210dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_15dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="16dp"
+        android:rowCount="2"
+        android:rowOrderPreserved="false">
 
         <Button
             android:id="@+id/storageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:backgroundTint="@color/white"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:backgroundTint="@color/buttonbg"
             android:text="@string/view_storage"
-            android:textColor="#0863D1"
-            tools:ignore="ButtonStyle" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/btnApi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20dp"
-            android:layout_marginTop="80dp"
-            android:backgroundTint="@color/white"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:backgroundTint="@color/buttonbg"
             android:text="@string/view_api"
-            android:textColor="#0863D1"
-            tools:ignore="ButtonStyle" />
-
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20dp"
-            android:layout_marginTop="80dp"
-            android:backgroundTint="@color/white"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="50dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="@dimen/_15dp"
+            android:backgroundTint="@color/buttonbg"
             android:text="@string/go_back"
-            android:textColor="#0863D1"
-            tools:ignore="ButtonStyle" />
+            android:textColor="@color/black" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="50dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginTop="@dimen/_15dp"
+            android:backgroundTint="@color/buttonbg"
+            android:text="@string/get_directions"
+            android:textColor="@color/black" />
+
+
+    </GridLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:background="#00BCD4"
         android:title="@string/your_title"
         app:titleTextColor="@color/black" />
 

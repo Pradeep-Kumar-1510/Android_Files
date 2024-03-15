@@ -45,7 +45,10 @@
             android:name=".activity.ViewFeedbackActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LifeCycleActivity"
+            android:name=".maps.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".maps.DirectionsActivity"
             android:exported="false" />
         <activity
             android:name=".activity.FeedbackActivity"
@@ -90,6 +93,9 @@
             android:name=".services.foregroundService.ForegroundService"
             android:foregroundServiceType="location|dataSync|mediaPlayback" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/my_map_api_key" />
 
     </application>
 

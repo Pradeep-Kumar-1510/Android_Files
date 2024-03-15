@@ -14,8 +14,8 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/postApi"
-            android:text="@string/post_api"/>
+            android:id="@+id/scanQR"
+            android:text="@string/scan_qr"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"

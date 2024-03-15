@@ -1,4 +1,4 @@
-package com.example.firstapp.mapImplemetations;
+package com.example.firstapp.maps;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

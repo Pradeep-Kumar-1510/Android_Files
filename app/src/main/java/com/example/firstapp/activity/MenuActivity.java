@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.firstapp.R;
 import com.example.firstapp.api.ApiActivity;
 import com.example.firstapp.broadcastFiles.BroadcastActivity;
+import com.example.firstapp.maps.DirectionsActivity;
+import com.example.firstapp.maps.MapActivity;
 import com.example.firstapp.services.backgroundService.ServiceActivity;
 import com.example.firstapp.storage.StorageActivity;
 
@@ -28,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         Button backButton = findViewById(R.id.backButton);
         Button storageButton = findViewById(R.id.storageButton);
         Button apiButton = findViewById(R.id.btnApi);
-
+        Button mapButton = findViewById(R.id.mapButton);
 
         backButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, HomePageActivity.class);
@@ -36,6 +38,11 @@ public class MenuActivity extends AppCompatActivity {
             Toast.makeText(MenuActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
         });
 
+
+        mapButton.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, DirectionsActivity.class);
+            startActivity(i);
+        });
 
         apiButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, ApiActivity.class);
@@ -71,19 +78,17 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
             Toast.makeText(this, "You are in feedback page", Toast.LENGTH_SHORT).show();
             return true;
-        } else if (itemId == R.id.helpAction) {
-            Intent intent = new Intent(MenuActivity.this, LifeCycleActivity.class);
+        } else if (itemId == R.id.mapAction) {
+            Intent intent = new Intent(MenuActivity.this, MapActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "You are in Help page", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You are viewing Map", Toast.LENGTH_SHORT).show();
             return true;
-        }
-        else if (itemId == R.id.viewFeedbacks) {
+        } else if (itemId == R.id.viewFeedbacks) {
             Intent intent = new Intent(MenuActivity.this, ViewFeedbackActivity.class);
             startActivity(intent);
             Toast.makeText(this, "You are viewing feedbacks submitted", Toast.LENGTH_SHORT).show();
             return true;
-        }
-        else if (itemId == R.id.broadcast) {
+        } else if (itemId == R.id.broadcast) {
             Intent intent = new Intent(MenuActivity.this, BroadcastActivity.class);
             startActivity(intent);
             Toast.makeText(this, "You are in Broadcast Page", Toast.LENGTH_SHORT).show();
