@@ -1,52 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
-    tools:context=".services.backgroundService.ServiceActivity">
+    android:background="@drawable/bgcolor">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/example_of_services"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        tools:context=".services.backgroundService.ServiceActivity">
 
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/start_services"
-        android:textColor="#00838F" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/example_of_services"
+            android:textSize="@dimen/_30sp"
+            android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/btnStop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnStart"
-        android:layout_alignStart="@+id/btnStart"
-        android:layout_alignEnd="@+id/btnStart"
-        android:backgroundTint="@color/white"
-        android:text="@string/stop_services"
-        android:textColor="#00838F" />
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/start_services"
+            android:textColor="@color/ashGreen" />
 
-    <Button
-        android:id="@+id/btn_Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnStop"
-        android:layout_alignStart="@+id/btnStart"
-        android:layout_alignEnd="@+id/btnStart"
-        android:backgroundTint="@color/white"
-        android:text="@string/go_back"
-        android:textColor="#00838F" />
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnStart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/stop_services"
+            android:textColor="@color/ashGreen" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnStop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/go_back"
+            android:textColor="@color/ashGreen" />
+
+    </RelativeLayout>
+
+</ScrollView>

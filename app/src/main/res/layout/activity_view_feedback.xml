@@ -12,31 +12,35 @@
         android:id="@+id/feedbacktitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:gravity="center"
         android:text="@string/feedbacks_submitted"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="@dimen/_30sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="cursive"
+        android:background="@drawable/textview_bgcolor2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
-        tools:layout_editor_absoluteX="43dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/feedbackview"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"/>
 
     <TextView
         android:id="@+id/feedbackview"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="68dp"
+        android:layout_height="@dimen/_200dp"
+        android:layout_marginTop="@dimen/_10dp"
         android:background="@color/white"
         android:hint="@string/feedbacks"
-        android:textColorHint="#039BE5"
-        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/_20sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feedbacktitle"
-        app:layout_constraintVertical_bias="0.018"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        android:layout_marginBottom="@dimen/_10dp"/>
 
     <Button
         android:id="@+id/backButton"
@@ -45,11 +49,12 @@
         android:backgroundTint="@color/white"
         android:text="@string/go_back"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feedbackview"
-        app:layout_constraintVertical_bias="0.534"
-        android:textStyle="bold"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

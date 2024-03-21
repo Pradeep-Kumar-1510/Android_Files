@@ -1,35 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bgcolor">
+    android:layout_marginTop="@dimen/_30dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgView"
         android:layout_width="@dimen/_70dp"
         android:layout_height="@dimen/_70dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/_30dp"
-        android:contentDescription="@string/image"
-        tools:ignore="ImageContrastCheck"/>
+        android:contentDescription="@string/image" />
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/_30dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:layout_centerVertical="true"/>
+        android:layout_toEndOf="@id/imgView"
+        android:layout_alignTop="@id/imgView"
+        android:layout_marginStart="@dimen/_10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sp" />
 
     <TextView
         android:id="@+id/text2"
-        android:layout_marginTop="@dimen/_20dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/_20dp"
-        android:layout_below="@+id/text1"
-        android:layout_toEndOf="@+id/imageView"
-        android:textColor="@color/white"
-        android:textSize="18sp"/>
+        android:layout_below="@id/text1"
+        android:layout_toEndOf="@id/imgView"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sp" />
 
 </RelativeLayout>

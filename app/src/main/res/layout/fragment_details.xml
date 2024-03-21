@@ -1,102 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp"
+    android:background="@drawable/bgcolor4"
     tools:context=".storage.sharedPreferences.DetailsFragment">
 
-    <LinearLayout
+    <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/bgcolor2"
-        android:orientation="vertical">
+        android:stretchColumns="*">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*">
+        <!-- TableRow for username -->
+        <TableRow>
 
-            <TableRow>
+            <!-- First column - Label -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp"
+                android:drawablePadding="@dimen/_10dp"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold|italic"
+                app:drawableStartCompat="@drawable/baseline_person_24"
+                android:layout_weight="1" />
 
-                <!-- First column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/username"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:drawableStartCompat="@drawable/baseline_person_24"
-                    android:layout_weight="1" />
+            <!-- Second column - Value -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold|italic"
+                android:layout_weight="1" />
 
-                <!-- Second column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@string/username"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1"
-                    android:id="@+id/username"/>
+        </TableRow>
 
-            </TableRow>
+        <!-- TableRow for phone number -->
+        <TableRow>
 
-            <!-- Second row -->
-            <TableRow>
+            <!-- First column - Label -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp"
+                android:drawablePadding="@dimen/_10dp"
+                android:text="@string/phone_number"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold|italic"
+                app:drawableStartCompat="@drawable/baseline_person_24"
+                android:layout_weight="1" />
 
-                <!-- First column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/phone_number"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:drawableStartCompat="@drawable/baseline_person_24"
-                    android:layout_weight="1" />
+            <!-- Second column - Value -->
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp"
+                android:text="@string/phone_number"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold|italic"
+                android:layout_weight="1" />
 
-                <!-- Second column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@string/phone_number"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1"
-                    android:id="@+id/phone"/>
+        </TableRow>
 
-            </TableRow>
+    </TableLayout>
 
-        </TableLayout>
-    </LinearLayout>
+    <!-- Button to load data -->
     <Button
         android:id="@+id/btnLoad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:backgroundTint="@color/white"
         android:text="@string/load"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/btnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:backgroundTint="@color/white"
         android:text="@string/go_back"
-        android:textColor="@color/black" />
-</FrameLayout>
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

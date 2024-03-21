@@ -8,65 +8,72 @@
     android:background="@color/buttonbg2">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="@dimen/_50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/_20dp"
-        android:textColor="@color/black"
         android:text="@string/get_directions"
         android:textSize="@dimen/_30sp"
+        android:textColor="@color/black"
         android:gravity="center_horizontal"
-        app:layout_constraintBottom_toTopOf="@id/currentLocation"
-        android:layout_marginHorizontal="@dimen/_50dp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_50dp"
+        app:layout_constraintBottom_toTopOf="@id/currentLocation" />
 
     <EditText
         android:id="@+id/currentLocation"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_50dp"
-        android:layout_marginHorizontal="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_50dp"
         android:fontFamily="sans-serif-medium"
         android:hint="@string/enter_start_location"
         android:inputType="textMultiLine"
         android:padding="@dimen/_10dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309"
-        tools:layout_editor_absoluteX="74dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/destination"
         android:importantForAutofill="no"
-        android:textColorHint="@color/black"/>
+        android:textSize="@dimen/_14sp"/>
 
     <EditText
         android:id="@+id/destination"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_50dp"
-        android:layout_marginHorizontal="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_50dp"
         android:fontFamily="sans-serif-medium"
         android:hint="@string/enter_destination"
         android:inputType="textMultiLine"
         android:padding="@dimen/_10dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/currentLocation"
-        app:layout_constraintVertical_bias="0.219"
-        tools:layout_editor_absoluteX="50dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/currentLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnRoute"
         android:importantForAutofill="no"
-        android:textColorHint="@color/black"/>
+        android:textSize="@dimen/_14sp"/>
 
     <Button
         android:id="@+id/btnRoute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/destination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_20dp"
         android:layout_marginBottom="@dimen/_210dp"
         android:text="@string/show_route"
-        android:backgroundTint="@color/ashGreen"/>
-
-
-
+        android:backgroundTint="@color/ashGreen"
+        android:textSize="@dimen/_14sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

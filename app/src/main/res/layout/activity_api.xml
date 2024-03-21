@@ -7,47 +7,40 @@
     tools:context=".api.ApiActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
         android:id="@+id/tab_layout"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/scanQR"
-            android:text="@string/scan_qr"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_qr" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/camera"
-            android:text="@string/camera"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/joke"
-            android:text="@string/view_jokes"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/threads"
-            android:text="@string/threads"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/threads" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/put"
-            android:text="@string/api_methods"/>
-
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/api_methods" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewPager"
-        android:layout_below="@+id/tab_layout"/>
-
+        android:layout_below="@id/tab_layout"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

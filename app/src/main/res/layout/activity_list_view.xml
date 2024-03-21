@@ -1,32 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.listView.ListViewActivity"
-    android:background="@drawable/bgcolor">
+    android:background="@drawable/bgcolor"
+    tools:context=".views.listView.ListViewActivity">
 
+    <!-- ListView fills the available space -->
     <ListView
         android:id="@+id/List_views"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:divider="@color/white"
         android:layout_weight="1"
-        android:dividerHeight="2sp"
+        android:divider="@color/white"
+        android:dividerHeight="@dimen/_2sp"
         android:listSelector="@color/buttonbg2"
         android:layout_marginTop="@dimen/_30dp" />
 
+    <!-- Button centered at the bottom -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20dp"
         android:backgroundTint="@color/white"
         android:onClick="goBackOnClick"
         android:text="@string/go_back"
-        android:textColor="#1976D2" />
-
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/deep_blue" />
 
 </LinearLayout>

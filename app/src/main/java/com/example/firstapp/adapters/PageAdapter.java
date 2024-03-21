@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.firstapp.api.retrofitGetApi.JokeApiFragment;
+
 import com.example.firstapp.api.retrofitApiMethods.ApiMethodsFragment;
 import com.example.firstapp.camera.CameraFragment;
 import com.example.firstapp.camera.QRCodeFragment;
@@ -24,10 +24,8 @@ public class PageAdapter extends FragmentStateAdapter {
         } else if (position == 1) {
             return new CameraFragment();
         } else if (position == 2) {
-            return new JokeApiFragment();
-        } else if (position == 3) {
             return new ThreadFragment();
-        }else if (position == 4) {
+        } else if (position == 3) {
             return new ApiMethodsFragment();
         }
         return new QRCodeFragment();
@@ -35,6 +33,6 @@ public class PageAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 4;
     }
 }

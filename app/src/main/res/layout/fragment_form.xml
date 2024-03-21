@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FormFragment"
-    android:background="@drawable/bgcolor2">
+    android:background="@drawable/bgcolor2"
+    tools:context=".fragments.FormFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/feed_welcome"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="20dp"/>
-
-
-    <EditText
-        android:id="@+id/feedbackEditText"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:hint="@string/enter_your_feedback_here"
-        android:minHeight="48dp"
-        android:inputType="text"
-        android:importantForAutofill="no"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/submitFeedbackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/feedbackEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="@string/submit_feedback"
-        />
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feed_welcome"
+            android:textSize="@dimen/_30sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"/>
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/feedbackEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_106dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:hint="@string/enter_your_feedback_here"
+            android:minHeight="@dimen/_48dp"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:textSize="@dimen/_20sp"
+            android:scrollbars="vertical"/>
+
+        <Button
+            android:id="@+id/submitFeedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feedbackEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/submit_feedback" />
+
+    </RelativeLayout>
+
+</ScrollView>

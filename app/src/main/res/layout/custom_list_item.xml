@@ -1,34 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/_30dp">
-
 
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="@dimen/_70dp"
         android:layout_height="@dimen/_70dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/_30dp"
         android:contentDescription="@string/image" />
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/_30dp"
-        android:layout_toEndOf="@+id/imgView"
+        android:layout_toEndOf="@id/imgView"
+        android:layout_alignParentTop="true"
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sp" />
+        android:textSize="@dimen/_14sp"
+        android:layout_marginStart="@dimen/_50dp"/>
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/_20dp"
-        android:layout_below="@+id/text1"
-        android:layout_toEndOf="@+id/imgView"
+        android:layout_below="@id/text1"
+        android:layout_toEndOf="@id/imgView"
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_50dp"
         android:textSize="@dimen/_14sp"/>
 
 </RelativeLayout>

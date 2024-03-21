@@ -90,20 +90,20 @@ public class LoginActivity extends AppCompatActivity {
             /*Checking if the values entered by the user are already registered, by comparing the
              * values that are available in the shared preference file("UserDetails").*/
 
-            if (enteredUsername.equals(savedUsername) && enteredPassword.equals(savedPassword)) {
+            if (enteredUsername.equals(savedUsername) && enteredPassword.equals(savedPassword) && !enteredPassword.isEmpty() && !enteredUsername.isEmpty()) {
                 Toast.makeText(this, "Login success", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
                 startActivity(i);
             } else {
                 // Displaying the error messages
-                if (!enteredUsername.equals(savedUsername)) {
+                if (!enteredUsername.equals(savedUsername) || enteredUsername.isEmpty()) {
                     usernameErrorView.setVisibility(View.VISIBLE);
                     usernameErrorView.setText("Invalid username Register First!!");
                 } else {
                     usernameErrorView.setVisibility(View.GONE);
                 }
 
-                if (!enteredPassword.equals(savedPassword)) {
+                if (!enteredPassword.equals(savedPassword) || enteredPassword.isEmpty()) {
                     passwordErrorView.setVisibility(View.VISIBLE);
                     passwordErrorView.setText("Invalid password");
                 } else {

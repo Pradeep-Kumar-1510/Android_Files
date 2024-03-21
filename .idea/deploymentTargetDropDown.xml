@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="RegisterActivityTest">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -15,7 +18,7 @@
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-02-23T05:29:22.370341800Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-03-20T18:50:24.868791700Z" />
         </State>
       </entry>
     </value>

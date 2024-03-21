@@ -9,43 +9,49 @@ import android.content.Intent;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Handler;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.example.firstapp.R;
+import com.example.firstapp.api.ApiActivity;
 
+/** @noinspection ALL*/
 public class ForegroundService extends Service {
     private static final String TAG = "ForegroundService";
     private static final int NOTIFICATION_ID = 1;
     private static final String CHANNEL_ID = "ForegroundServiceChannel";
 
-    private Thread soundThread;
+    private Handler handler;
+    private Thread musicThread;
+    private Runnable toastRunnable;
+    private boolean isToastShowing = false;
+    private volatile boolean isServiceRunning = true;
     private Ringtone notificationSound;
-    private boolean isPlaying = false;
 
     @Override
     public void onCreate() {
         super.onCreate();
         createNotificationChannel();
+        handler = new Handler();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (!isPlaying) {
-            startSound();
-        }
+        startPlayingMusic();
+        startToast();
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        stopSound();
-        removeNotification();
+        stopForegroundService();
     }
 
     @Nullable
@@ -66,7 +72,7 @@ public class ForegroundService extends Service {
     }
 
     private Notification buildNotification() {
-        Intent notificationIntent = new Intent(this, ForegroundService.class);
+        Intent notificationIntent = new Intent(this, ApiActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
         return new NotificationCompat.Builder(this, CHANNEL_ID)
@@ -87,40 +93,66 @@ public class ForegroundService extends Service {
         stopForeground(true);
     }
 
-    private void startSound() {
-        soundThread = new Thread(() -> {
+    private void startPlayingMusic() {
+        musicThread = new Thread(() -> {
             try {
-                isPlaying = true;
                 Uri defaultRingtoneUri = Settings.System.DEFAULT_RINGTONE_URI;
                 notificationSound = RingtoneManager.getRingtone(getApplicationContext(), defaultRingtoneUri);
                 showNotification();
-                while (isPlaying) {
+                while (isServiceRunning) {
                     notificationSound.play();
                     Thread.sleep(5000); // Sound plays every 5 seconds
                 }
             } catch (InterruptedException e) {
-                Log.d(TAG, "Sound thread interrupted");
-                isPlaying = false;
+                Log.d(TAG, "Music thread interrupted");
             }
         });
-        soundThread.start();
-        Log.d(TAG, "Sound thread started");
+        musicThread.start();
+        Log.d(TAG, "Music thread started");
     }
 
-    private void stopSound() {
-        Log.d(TAG, "Stopping sound");
-        if (soundThread != null) {
-            soundThread.interrupt(); // Interrupt the sound thread
-            soundThread = null; // Set soundThread to null to indicate it's no longer running
-            Log.d(TAG, "Sound thread interrupted");
+    private void stopPlayingMusic() {
+
+        //stopping the thread
+        isServiceRunning = false; // Set the flag to stop the music thread
+        if (musicThread != null) {
+            musicThread.interrupt(); // Interrupt the music thread
+            musicThread = null; // Set musicThread to null to indicate it's no longer running
+            Log.d(TAG, "Music thread stopped");
         }
+        // Ensure the Ringtone is stopped
         if (notificationSound != null) {
-            notificationSound.stop(); // Stop the notification sound
-            notificationSound = null; // Set the notificationSound to null to release the reference
-            Log.d(TAG, "Notification sound stopped");
+            notificationSound.stop();
+            notificationSound = null; // Set to null to release resources
         }
-        removeNotification();
-        isPlaying = false;
     }
 
+    private void startToast() {
+        isToastShowing = true;
+        toastRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (isToastShowing) {
+                    Toast.makeText(getApplicationContext(), "Thread two is running", Toast.LENGTH_SHORT).show();
+                    handler.postDelayed(this, 3000); // Display toast every 3 seconds
+                }
+            }
+        };
+        handler.post(toastRunnable);
+        Log.d(TAG, "Toast thread started");
+    }
+
+    private void stopToast() {
+        isToastShowing = false;
+        handler.removeCallbacks(toastRunnable);
+        Log.d(TAG, "Toast thread stopped");
+    }
+
+    private void stopForegroundService() {
+        stopPlayingMusic();
+        stopToast();
+        removeNotification();
+    }
 }
+
+

@@ -1,145 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
-    tools:context=".activity.LoginActivity">
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="@dimen/_150dp"
-        android:layout_height="@dimen/_150dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/baseline_person_24"
-        tools:ignore="ContentDescription" />
-
-    <EditText
-        android:id="@+id/usernameEditText"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoImageView"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/custom_button_bg4"
-        android:drawablePadding="10dp"
-        android:hint="@string/enter_username"
-        android:importantForAutofill="no"
-        android:inputType="textAutoComplete"
-        android:padding="15dp"
-        android:textColorHint="#B71C1C"
-        app:drawableStartCompat="@drawable/baseline_person_24"
-        android:textColor="@color/black"/>
+        android:background="@drawable/bgcolor"
+        tools:context=".activity.LoginActivity">
 
-    <TextView
-        android:id="@+id/usernameErrorTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usernameEditText"
-        android:layout_marginStart="30dp"
-        android:textColor="@android:color/holo_red_dark"
-        android:visibility="gone" />
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="@dimen/_150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50dp"
+            android:src="@drawable/baseline_person_24"
+            tools:ignore="ContentDescription" />
 
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usernameErrorTextView"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/custom_button_bg4"
-        android:drawablePadding="10dp"
-        android:hint="@string/enter_password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColorHint="#B71C1C"
-        app:drawableStartCompat="@drawable/baseline_password_24"
-        android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoImageView"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:background="@drawable/custom_button_bg4"
+            android:drawablePadding="@dimen/_10dp"
+            android:hint="@string/enter_username"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:padding="@dimen/_15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            android:textColorHint="@color/brown"
+            app:drawableStartCompat="@drawable/baseline_person_24" />
 
-    <TextView
-        android:id="@+id/passwordErrorTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordEditText"
-        android:layout_marginStart="30dp"
-        android:textColor="@android:color/holo_red_dark"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/usernameErrorTextView"
+            android:textSize="@dimen/_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usernameEditText"
+            android:layout_marginStart="@dimen/_30dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone" />
 
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordErrorTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/buttonbg"
-        android:text="@string/login"
-        android:textColor="#212121" />
+        <EditText
+            android:textSize="@dimen/_14sp"
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usernameErrorTextView"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:background="@drawable/custom_button_bg4"
+            android:drawablePadding="@dimen/_10dp"
+            android:hint="@string/enter_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="@dimen/_15dp"
+            android:textColorHint="@color/brown"
+            app:drawableStartCompat="@drawable/baseline_password_24"
+            android:textColor="@color/black"/>
 
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/buttonbg"
-        android:text="@string/register"
-        android:textColor="#212121" />
+        <TextView
+            android:textSize="@dimen/_14sp"
+            android:id="@+id/passwordErrorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginStart="@dimen/_30dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone" />
 
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/passwordErrorTextView"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:backgroundTint="@color/buttonbg"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sp"
+            android:textAllCaps="true"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/loginBtn"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:backgroundTint="@color/buttonbg"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sp"
+            android:textAllCaps="true"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerBtn"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
 
-        <ImageButton
-            android:id="@+id/fbBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:contentDescription="@string/facebook_button"
-            android:scaleType="fitCenter"
-            android:src="@drawable/fb"
-            tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
+            <ImageButton
+                android:id="@+id/fbBtn"
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:contentDescription="@string/facebook_button"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fb"
+                tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
 
+            <ImageButton
+                android:id="@+id/twitterBtn"
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginStart="@dimen/_50dp"
+                android:contentDescription="@string/twitter_button"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twitter"
+                tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
 
-        <ImageButton
-            android:id="@+id/twitterBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:contentDescription="@string/twitter_button"
-            android:scaleType="fitCenter"
-            android:src="@drawable/twitter"
-            tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
+            <ImageButton
+                android:id="@+id/mailBtn"
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginStart="@dimen/_50dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:contentDescription="@string/gmail_button"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gmail"
+                tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
 
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/mailBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:contentDescription="@string/gmail_button"
-            android:scaleType="fitCenter"
-            android:src="@drawable/gmail"
-            tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
+    </RelativeLayout>
 
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</ScrollView>

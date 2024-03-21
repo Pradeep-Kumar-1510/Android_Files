@@ -22,15 +22,27 @@ import com.example.firstapp.storage.StorageActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        Button callButton = findViewById(R.id.callButton);
         Button backButton = findViewById(R.id.backButton);
         Button storageButton = findViewById(R.id.storageButton);
         Button apiButton = findViewById(R.id.btnApi);
         Button mapButton = findViewById(R.id.mapButton);
+
+        callButton.setOnClickListener(v -> {
+            Intent i = new Intent(MenuActivity.this, SecondMenuActivity.class);
+            startActivity(i);
+            Toast.makeText(MenuActivity.this, "You are in Home Page", Toast.LENGTH_SHORT).show();
+        });
+
 
         backButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, HomePageActivity.class);
@@ -47,20 +59,20 @@ public class MenuActivity extends AppCompatActivity {
         apiButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, ApiActivity.class);
             startActivity(i);
-            Toast.makeText(MenuActivity.this, "You are in Api Page", Toast.LENGTH_SHORT).show();
         });
 
 
         storageButton.setOnClickListener(v -> {
             Intent i = new Intent(MenuActivity.this, StorageActivity.class);
             startActivity(i);
-            Toast.makeText(MenuActivity.this, "You are in Menu Page", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MenuActivity.this, "You are in Storage Page", Toast.LENGTH_SHORT).show();
         });
 
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,6 +84,7 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
+
 
         if (itemId == R.id.feedbackAction) {
             Intent intent = new Intent(MenuActivity.this, FeedbackActivity.class);

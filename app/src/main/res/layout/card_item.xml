@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="5dp">
+    android:layout_margin="@dimen/_5dp"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardElevation="@dimen/_5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/IVCourse"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_100dp"
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher"
             tools:ignore="ContentDescription,ImageContrastCheck" />

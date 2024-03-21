@@ -58,4 +58,7 @@ public class JsonDataClass {
         return text;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

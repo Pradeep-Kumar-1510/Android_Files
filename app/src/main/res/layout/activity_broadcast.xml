@@ -4,35 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".broadcastFiles.BroadcastActivity"
-    android:background="@drawable/bgcolor">
+    android:background="@drawable/bgcolor"
+    tools:context=".broadcastFiles.BroadcastActivity">
 
     <Button
         android:id="@+id/startBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:backgroundTint="@color/white"
         android:text="@string/broadcast"
-        android:textColor="#00838F"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="30dp"/>
+        android:textSize="@dimen/_14sp"/>
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:backgroundTint="@color/white"
         android:text="@string/go_back"
-        android:textColor="#00838F"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startBtn"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintTop_toBottomOf="@id/startBtn"
+        android:textSize="@dimen/_14sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

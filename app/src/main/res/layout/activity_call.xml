@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CallActivity"
+    android:background="@drawable/bgcolor4">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_200dp"
+            android:hint="@string/enter_mobile_no"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:importantForAutofill="no"
+            android:textSize="@dimen/_14sp"/>
+
+        <Button
+            android:id="@+id/call_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call"
+            android:layout_below="@id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textSize="@dimen/_14sp"/>
+
+</RelativeLayout>

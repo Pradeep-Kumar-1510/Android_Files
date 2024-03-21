@@ -25,7 +25,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-/***Api used in json placeholder api
+/***Api used is json placeholder api
  *  <a href="https://jsonplaceholder.typicode.com/posts">Json PlaceHolder Api..</a>***/
 public class ApiMethodsFragment extends Fragment {
 

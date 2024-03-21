@@ -1,85 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bgcolor"
-    tools:context=".activity.RegisterActivity">
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="@dimen/_150dp"
-        android:layout_height="@dimen/_150dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/baseline_person_24"
-        android:contentDescription="@string/login"/>
-
-    <EditText
-        android:id="@+id/register"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoImageView"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/custom_button_bg4"
-        android:hint="@string/enter_username"
-        android:padding="15dp"
-        android:textColorHint="#B71C1C"
-        android:inputType="textPersonName"
-        android:importantForAutofill="no"
-        app:drawableStartCompat="@drawable/baseline_person_24"
-        android:drawablePadding="10dp"/>
+        tools:context=".activity.RegisterActivity">
 
-    <EditText
-        android:id="@+id/newPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/custom_button_bg4"
-        android:hint="@string/enter_password"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColorHint="#B71C1C"
-        android:importantForAutofill="no"
-        app:drawableStartCompat="@drawable/baseline_password_24"
-        android:drawablePadding="10dp"/>
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="@dimen/_150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:contentDescription="@string/login"
+            android:src="@drawable/baseline_person_24" />
 
-    <Spinner
-        android:id="@+id/userSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/newPassword"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/custom_button_bg1"
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoImageView"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/custom_button_bg4"
+            android:hint="@string/enter_username"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_15dp"
+            android:textColorHint="@color/design_default_color_error"
+            android:textSize="@dimen/_14sp" />
 
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/userCheckbox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/register"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@color/cardview_dark_background"/>
+        <EditText
+            android:id="@+id/newPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/custom_button_bg4"
+            android:hint="@string/enter_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="@dimen/_15dp"
+            android:textColorHint="@color/design_default_color_error" />
 
-    <CheckBox
-        android:id="@+id/userCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/userSpinner"
-        android:background="@color/buttonbg3"
-        android:text="@string/Terms"
-        tools:ignore="VisualLintButtonSize"
-        android:layout_marginTop="30dp"/>
+        <Spinner
+            android:id="@+id/userSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newPassword"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/custom_button_bg1"
+            android:minHeight="@dimen/_50dp" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userSpinner"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:backgroundTint="@color/buttonbg"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/_14sp" />
+
+        <CheckBox
+            android:id="@+id/userCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerBtn"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@color/buttonbg3"
+            android:text="@string/Terms"
+            android:textSize="@dimen/_14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200dp"
+            android:layout_below="@id/userCheckbox" />
+
+    </RelativeLayout>
+
+</ScrollView>

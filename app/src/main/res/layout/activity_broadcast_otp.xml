@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".broadcastFiles.BroadcastOtpActivity"
+    android:background="@color/ashGreen">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/textview_bg_design1"
+        android:text="@string/otp_implementation"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="@dimen/_30sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive" />
+
+    <EditText
+        android:id="@+id/etOtp"
+        android:layout_width="@dimen/_200dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text"
+        android:layout_marginTop="@dimen/_20dp"
+        android:hint="@string/enter_otp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:gravity="center"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:textSize="@dimen/_14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etOtp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:text="@string/otp_explaination"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/_14sp"
+        android:background="@drawable/textview_bgcolor2"
+        android:fontFamily="sans-serif-smallcaps" />
+
+</RelativeLayout>

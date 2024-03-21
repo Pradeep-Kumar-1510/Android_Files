@@ -1,174 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
-    android:orientation="vertical"
-    tools:context=".activity.HomePageActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="60dp"
-        android:padding="15dp"
-        android:text="@string/greetings"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-
-    <ImageView
-        android:layout_width="90dp"
-        android:layout_height="98dp"
-        android:padding="20dp"
-        android:src="@drawable/baseline_person_24"
-        tools:ignore="ContentDescription"
-        android:layout_marginStart="150dp"/>
+    android:background="@drawable/bgcolor">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bgcolor2"
         android:orientation="vertical">
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*">
-
-            <TableRow>
-
-                <!-- First column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/username"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:drawableStartCompat="@drawable/baseline_person_24"
-                    android:layout_weight="1" />
-
-                <!-- Second column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@string/username"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1"
-                    android:id="@+id/username"/>
-
-            </TableRow>
-
-            <!-- Second row -->
-            <TableRow>
-
-                <!-- First column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/password"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:drawableStartCompat="@drawable/baseline_person_24"
-                    android:layout_weight="1" />
-
-                <!-- Second column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@string/password"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1"
-                    android:id="@+id/password"/>
-
-            </TableRow>
-
-<!--            Third Row -->
-            <TableRow>
-
-                <!-- First column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/role"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:drawableStartCompat="@drawable/baseline_person_24"
-                    android:layout_weight="1" />
-
-                <!-- Second column -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@string/password"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1"
-                    android:id="@+id/role"/>
-
-            </TableRow>
-
-
-        </TableLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="@string/hi_there"
-            android:textColor="#730632"
-            android:textStyle="italic|bold"
-            android:textSize="14sp"
-            />
+            android:height="@dimen/_60dp"
+            android:padding="@dimen/_15dp"
+            android:text="@string/greetings"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="cursive"
+            tools:ignore="TextContrastCheck" />
+
+
+        <ImageView
+            android:layout_width="@dimen/_90dp"
+            android:layout_height="@dimen/_98dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/_20dp"
+            android:src="@drawable/baseline_person_24"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgcolor2"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- First row -->
+                <TableRow>
+
+                    <!-- First column -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:drawablePadding="@dimen/_10dp"
+                        android:text="@string/username"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold|italic"
+                        app:drawableStartCompat="@drawable/baseline_person_24"
+                        android:layout_weight="1" />
+
+                    <!-- Second column -->
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:text="@string/username"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold|italic"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_weight="1" />
+
+                </TableRow>
+
+                <!-- Second row -->
+                <TableRow>
+
+                    <!-- First column -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:drawablePadding="@dimen/_10dp"
+                        android:text="@string/password"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold|italic"
+                        app:drawableStartCompat="@drawable/baseline_person_24"
+                        android:layout_weight="1" />
+
+                    <!-- Second column -->
+                    <TextView
+                        android:id="@+id/password"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:text="@string/password"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_14sp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textStyle="bold|italic"
+                        android:layout_weight="1" />
+
+                </TableRow>
+
+                <!-- Third Row -->
+                <TableRow>
+
+                    <!-- First column -->
+                    <TextView
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:drawablePadding="@dimen/_10dp"
+                        android:text="@string/role"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold|italic"
+                        app:drawableStartCompat="@drawable/baseline_person_24"
+                        android:layout_weight="1" />
+
+                    <!-- Second column -->
+                    <TextView
+                        android:id="@+id/role"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20dp"
+                        android:text="@string/role"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold|italic"
+                        android:layout_weight="1" />
+
+                </TableRow>
+
+            </TableLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
+                android:padding="@dimen/_20dp"
+                android:paddingStart="@dimen/_20dp"
+                android:paddingEnd="@dimen/_20dp"
+                android:text="@string/hi_there"
+                android:textColor="@color/meroon"
+                android:fontFamily="cursive"
+                android:textSize="@dimen/_15sp"
+                android:textStyle="italic|bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_20dp"
+                android:paddingEnd="@dimen/_20dp"
                 android:text="@string/meeting"
                 android:textAlignment="center"
                 android:textStyle="italic"
-                android:textSize="14sp"
-                android:fontFamily="sans-serif-condensed-medium"/>
+                android:textSize="@dimen/_14sp"
+                android:fontFamily="sans-serif-condensed-medium" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/popup_textview"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_130dp"
+            android:layout_marginBottom="@dimen/_50dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="@string/click_for_pop_up_menu"
+            android:textColor="@color/deep_blue"
+            android:textSize="@dimen/_14sp"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/popup_textview"
-        android:layout_width="@dimen/_150dp"
-        android:layout_height="@dimen/_50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_130dp"
-        android:layout_marginBottom="@dimen/_50dp"
-        android:background="@color/white"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
-        android:text="@string/click_for_pop_up_menu"
-        android:textColor="#064AAF"
-        android:textSize="@dimen/_14sp"
-        tools:ignore="TextSizeCheck" />
-
-</LinearLayout>
+</ScrollView>

@@ -1,62 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.FeedbackActivity"
+    android:orientation="vertical"
     android:background="@drawable/bgcolor"
-    android:orientation="vertical">
+    tools:context=".activity.FeedbackActivity">
 
     <FrameLayout
+        android:id="@+id/frame1"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:id="@+id/frame1"/>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:id="@+id/frag1btn"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="@string/rate_us"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:id="@+id/frag2btn"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:text="@string/feed_back" />
+        <Button
+            android:id="@+id/frag1btn"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_50dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_30dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/rate_us"
+            tools:ignore="ButtonStyle"
+            android:textSize="@dimen/_14sp"/>
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="@string/feed_welcome"-->
-<!--        android:textColor="#0D10DD"-->
-<!--        android:textStyle="bold|italic"-->
-<!--        android:background="@color/white"-->
-<!--        android:padding="20dp"-->
-<!--        />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/backButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/go_back"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:textColor="#0863D1"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="150dp"-->
-<!--        />-->
-
-
-</RelativeLayout>
+        <Button
+            android:id="@+id/frag2btn"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_30dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/feed_back"
+            tools:ignore="ButtonStyle"
+            android:textSize="@dimen/_14sp"/>
+    </LinearLayout>
+</LinearLayout>

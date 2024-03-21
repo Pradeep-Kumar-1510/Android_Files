@@ -4,9 +4,13 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
 
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -19,6 +23,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +35,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.PushNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcastFiles.BroadcastOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SecondMenuActivity"
+            android:exported="false" />
         <activity
             android:name=".api.ApiActivity"
             android:exported="false"
@@ -88,15 +105,21 @@
             android:exported="true" />
 
         <service android:name=".services.backgroundService.MyService" />
-
         <service
             android:name=".services.foregroundService.ForegroundService"
             android:foregroundServiceType="location|dataSync|mediaPlayback" />
+        <service android:name="com.example.firstapp.activity.FirebaseService"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/my_map_api_key" />
-
     </application>
 
 </manifest>
