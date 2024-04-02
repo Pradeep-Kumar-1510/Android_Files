@@ -57,8 +57,8 @@ public class ApiMethodsFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        //creating instance of the interface that define api endpoints
         apiService = retrofit.create(JsonApiService.class);
-
 
         btnGetData.setOnClickListener(v -> getPosts());
         btnPostData.setOnClickListener(v -> postData());
@@ -275,8 +275,6 @@ public class ApiMethodsFragment extends Fragment {
         });
     }
 }
-
-
 
 
 /*** Below Code is an older version of implementation of api calls

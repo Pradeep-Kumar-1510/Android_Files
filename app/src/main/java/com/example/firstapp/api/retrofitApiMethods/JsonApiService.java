@@ -10,10 +10,30 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
-import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface JsonApiService {
+
+    @GET("posts")
+    Call<List<JsonDataClass>> getPosts();
+
+
+    @POST("posts")
+    @FormUrlEncoded
+    Call<JsonDataClass> createPost(
+            @Field("userId") int userId,
+            @Field("title") String title,
+            @Field("text") String text
+    );
+
+    @DELETE("posts/{id}")
+    Call<Void> deletePost(@Path("id") int id);
+
+    @PATCH("posts/{id}")
+    Call<JsonDataClass> patchPost(@Path("id") int id, @Body JsonDataClass updatedData);
+
+}
+
 
 //    @GET("posts")
 //    Call<List<JsonDataClass>> getPosts();
@@ -37,23 +57,3 @@ public interface JsonApiService {
 //
 //    @DELETE("posts/{id}")
 //    Call<Void> deletePost(@Path("id") int id);
-
-    @GET("posts")
-    Call<List<JsonDataClass>> getPosts();
-
-
-    @POST("posts")
-    @FormUrlEncoded
-    Call<JsonDataClass> createPost(
-            @Field("userId") int userId,
-            @Field("title") String title,
-            @Field("text") String text
-    );
-
-    @DELETE("posts/{id}")
-    Call<Void>deletePost(@Path("id") int id);
-
-    @PATCH("posts/{id}")
-    Call<JsonDataClass>patchPost(@Path("id") int id, @Body  JsonDataClass updatedData);
-
-}

@@ -36,7 +36,13 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="31">
         <activity
-            android:name=".activity.PushNotificationsActivity"
+            android:name=".activity.SampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firebaseNotification.PushNotificationsActivity"
             android:exported="false" />
         <activity
             android:name=".broadcastFiles.BroadcastOtpActivity"
@@ -108,14 +114,13 @@
         <service
             android:name=".services.foregroundService.ForegroundService"
             android:foregroundServiceType="location|dataSync|mediaPlayback" />
-        <service android:name="com.example.firstapp.activity.FirebaseService"
+        <service
+            android:name=".firebaseNotification.FirebaseService"
             android:exported="false">
-
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

@@ -20,5 +20,7 @@
     <color name="deep_pink">#F45E5E</color>
     <color name="dark_pink">#ED0151</color>
     <color name="yellow">#E3CD0B</color>
+    <color name="grey">#4A4E4D</color>
+    <color name="pale_brown">#DBC1AC</color>
 
 </resources>

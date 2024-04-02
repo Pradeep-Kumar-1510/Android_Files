@@ -1,4 +1,4 @@
-package com.example.firstapp.activity;
+package com.example.firstapp.firebaseNotification;
 
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
 import com.example.firstapp.R;
+import com.example.firstapp.activity.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -63,7 +64,7 @@ public class FirebaseService extends FirebaseMessagingService {
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         NotificationChannel channel = new NotificationChannel(channelId,
-                "Channel human readable title",
+                "title",
                 NotificationManager.IMPORTANCE_DEFAULT);
         notificationManager.createNotificationChannel(channel);
 

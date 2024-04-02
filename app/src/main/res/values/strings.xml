@@ -93,7 +93,7 @@
     <string name="error_found_is">"Error found is : "</string>
     <string name="response_code">"Response Code : "</string>
     <string name="threads_and_foreground_service">Threads and Foreground Service</string>
-    <string name="foreground_brief">In this fragment when the button is toggled forground service and threads are started while the threads continue to run the sounds sequentially in background,A foreground notification is enabled until the user toggles the button to stop both background and foreground services.</string>
+    <string name="foreground_brief">In this fragment when the button is toggled foreground service and threads are started while the threads continue to run the sounds sequentially in background,A foreground notification is enabled until the user toggles the button to stop both background and foreground services.</string>
     <string name="api_methods">API Methods</string>
     <string name="other_api_methods">Other Api Methods</string>
     <string name="code">"Code: "</string>
@@ -146,4 +146,11 @@
     <string name="firebase_notification">Notification from firebase</string>
     <string name="sec_act_explaination">This activity is an example of drawer menu and other implementations</string>
     <string name="notifications">Notifications</string>
+    <string name="maps_link"><![CDATA[https://www.google.com/maps/dir/?api=1&origin=]]></string>
+    <string name="maps_package">com.google.android.apps.maps</string>
+    <string name="maps_download_link"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en&gl=US]]></string>
+    <string name="edit_details">Edit Details</string>
+    <string name="enter_role">Enter Role</string>
+    <string name="check_me">Check me</string>
+    <string name="testing_activity">Testing Activity</string>
 </resources>

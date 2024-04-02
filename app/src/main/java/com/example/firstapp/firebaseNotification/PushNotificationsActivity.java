@@ -1,7 +1,8 @@
-package com.example.firstapp.activity;
+package com.example.firstapp.firebaseNotification;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ public class PushNotificationsActivity extends AppCompatActivity {
 
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
             if (!task.isSuccessful()) {
-                System.out.println("Fetching FCM registration Token failed");
+                System.out.println("Fetching FCM Token failed");
                 return;
             }
             String token = task.getResult();
@@ -32,6 +33,7 @@ public class PushNotificationsActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
             etToken.setText(token);
+            Log.d("token",token);
         });
     }
 }

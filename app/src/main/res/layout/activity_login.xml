@@ -52,7 +52,7 @@
 
         <EditText
             android:textSize="@dimen/_14sp"
-            android:id="@+id/passwordEditText"
+            android:id="@+id/passwordView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/usernameErrorTextView"
@@ -74,7 +74,7 @@
             android:id="@+id/passwordErrorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/passwordEditText"
+            android:layout_below="@id/passwordView"
             android:layout_marginStart="@dimen/_30dp"
             android:textColor="@android:color/holo_red_dark"
             android:visibility="gone" />

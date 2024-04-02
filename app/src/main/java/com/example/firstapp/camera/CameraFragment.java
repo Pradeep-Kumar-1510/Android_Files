@@ -74,16 +74,6 @@ public class CameraFragment extends Fragment {
         return view;
     }
 
-    private void startCamera(boolean isVideo) {
-        Intent cameraIntent;
-        if (isVideo) {
-            cameraIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-        } else {
-            cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        }
-        startActivityForResult(cameraIntent, isVideo ? VIDEO_CAPTURE_REQUEST : CAMERA_REQUEST);
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -94,6 +84,16 @@ public class CameraFragment extends Fragment {
                 showToast("Camera permission denied");
             }
         }
+    }
+
+    private void startCamera(boolean isVideo) {
+        Intent cameraIntent;
+        if (isVideo) {
+            cameraIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+        } else {
+            cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        }
+        startActivityForResult(cameraIntent, isVideo ? VIDEO_CAPTURE_REQUEST : CAMERA_REQUEST);
     }
 
     @Override
@@ -108,7 +108,7 @@ public class CameraFragment extends Fragment {
             } else if (requestCode == VIDEO_CAPTURE_REQUEST) {
                 assert data != null;
                 capturedVideoUri = data.getData();
-                if (capturedVideoUri != null) {
+                if (capturedVideoUri != null) { //in if condition we are checking if the video is successfully captured or not
                     imageView.setImageURI(capturedVideoUri);
                     showSaveOrCancelDialog(true);
                 }
@@ -122,9 +122,9 @@ public class CameraFragment extends Fragment {
                 .setCancelable(false)
                 .setPositiveButton("Save", (dialog, which) -> {
                     if (isVideo) {
-                        saveMediaToInternalStorage(capturedVideoUri, true);
+                        saveMediaToStorage(capturedVideoUri, true);
                     } else {
-                        saveMediaToInternalStorage(capturedBitmap, false);
+                        saveMediaToStorage(capturedBitmap, false);
                     }
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
@@ -134,7 +134,7 @@ public class CameraFragment extends Fragment {
         alert.show();
     }
 
-    private void saveMediaToInternalStorage(Object media, boolean isVideo) {
+    private void saveMediaToStorage(Object media, boolean isVideo) {
         long timestamp = System.currentTimeMillis();
         String fileExtension = isVideo ? ".mp4" : ".jpg";
         String fileName = "media_" + timestamp + fileExtension;

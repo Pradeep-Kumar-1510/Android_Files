@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.firstapp.R;
 import com.example.firstapp.databinding.ActivityDirectionsBinding;
 
 public class DirectionsActivity extends AppCompatActivity {
@@ -30,13 +32,13 @@ public class DirectionsActivity extends AppCompatActivity {
 
     private void getDirections(String startLocation, String endLocation) {
         try {
-            Uri uri = Uri.parse("https://www.google.com/maps/dir/?api=1&origin=" + Uri.encode(startLocation) + "&destination=" + Uri.encode(endLocation));
+            Uri uri = Uri.parse(getString(R.string.maps_link) + Uri.encode(startLocation) + "&destination=" + Uri.encode(endLocation));
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.setPackage("com.google.android.apps.maps");
+            intent.setPackage(getString(R.string.maps_package));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         } catch (ActivityNotFoundException exception) {
-            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en&gl=US");
+            Uri uri = Uri.parse(getString(R.string.maps_download_link));
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);

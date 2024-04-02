@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.firstapp.R;
 import com.example.firstapp.broadcastFiles.BroadcastOtpActivity;
+import com.example.firstapp.firebaseNotification.PushNotificationsActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class SecondMenuActivity extends AppCompatActivity {
@@ -51,8 +52,10 @@ public class SecondMenuActivity extends AppCompatActivity {
             } else if (id == R.id.contacts) {
                 Intent intent = new Intent(SecondMenuActivity.this, PushNotificationsActivity.class);
                 startActivity(intent);
-                Toast.makeText(SecondMenuActivity.this, "Contacts Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.about) {
+                Intent intent = new Intent(SecondMenuActivity.this, SampleActivity.class);
+                startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
             }
 
