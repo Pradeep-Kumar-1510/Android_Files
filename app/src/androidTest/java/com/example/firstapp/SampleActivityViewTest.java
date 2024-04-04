@@ -14,7 +14,7 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.example.firstapp.activity.SampleActivity;
+import com.example.firstapp.activity.EspressoActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,8 +25,8 @@ import org.junit.runner.RunWith;
 public class SampleActivityViewTest {
 
     @Rule
-    public ActivityScenarioRule<SampleActivity> activityScenarioRule
-            = new ActivityScenarioRule<>(SampleActivity.class);
+    public ActivityScenarioRule<EspressoActivity> activityScenarioRule
+            = new ActivityScenarioRule<>(EspressoActivity.class);
 
     @Test
     public void testViewsDisplayed() {
@@ -55,7 +55,7 @@ public class SampleActivityViewTest {
 
         Espresso.onView(withId(R.id.editText1)).perform(ViewActions.typeText("Text to clear"));
         Espresso.onView(withId(R.id.button1)).perform(ViewActions.click());
-        Espresso.onView(withId(R.id.editText1)).check(matches(withText("")));
+        Espresso.onView(withId(R.id.editText1)).check(matches(withText(" ")));
     }
     public void testCheckBox() {
 

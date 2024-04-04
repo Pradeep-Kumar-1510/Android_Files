@@ -54,7 +54,7 @@ public class SecondMenuActivity extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.about) {
-                Intent intent = new Intent(SecondMenuActivity.this, SampleActivity.class);
+                Intent intent = new Intent(SecondMenuActivity.this, EspressoActivity.class);
                 startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
             }
