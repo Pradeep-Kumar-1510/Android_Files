@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgcolor3"
+    tools:context=".activity.UnitTestActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="@dimen/_10dp"
+            android:text="@string/unitTest_explanation"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            android:id="@+id/textView"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_below="@+id/textView"
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:hint="@string/enter_your_mail_address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Purple"
+            android:textSize="@dimen/_14sp" />
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/editTextEmail"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:autofillHints="username"
+            android:hint="@string/enter_username"
+            android:inputType="text"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Purple"
+            android:textSize="@dimen/_14sp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/editTextUsername"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:autofillHints="password"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Purple"
+            android:textSize="@dimen/_14sp" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/editTextPassword"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:autofillHints="phone"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Purple"
+            android:textSize="@dimen/_14sp" />
+
+        <EditText
+            android:id="@+id/editTextUrl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/editTextPhoneNumber"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:autofillHints="no"
+            android:hint="@string/enter_a_url"
+            android:inputType="textUri"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Purple"
+            android:textSize="@dimen/_14sp" />
+
+        <Button
+            android:id="@+id/btnValidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextUrl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:backgroundTint="@color/buttonbg3"
+            android:padding="@dimen/_10dp"
+            android:text="@string/validate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:backgroundTint="@color/buttonbg3"
+            android:padding="@dimen/_10dp"
+            android:text="@string/go_back"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/editTextUrl"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:backgroundTint="@color/buttonbg3"
+            android:padding="@dimen/_10dp"
+            android:text="@string/clear"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/editTextUrl"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

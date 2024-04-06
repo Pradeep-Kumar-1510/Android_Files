@@ -54,9 +54,17 @@ public class SecondMenuActivity extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.about) {
-                Intent intent = new Intent(SecondMenuActivity.this, EspressoActivity.class);
+                Intent intent = new Intent(SecondMenuActivity.this, ProfileActivity.class);
                 startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
+            } else if (id == R.id.espressoTest) {
+                Intent intent = new Intent(SecondMenuActivity.this, EspressoActivity.class);
+                startActivity(intent);
+                Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
+            } else if (id == R.id.unitTest) {
+                Intent intent = new Intent(SecondMenuActivity.this, UnitTestActivity.class);
+                startActivity(intent);
+                Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
             }
 
             drawer.closeDrawer(GravityCompat.START);
@@ -66,7 +74,7 @@ public class SecondMenuActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        // Handle action bar item clicks here
+
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }

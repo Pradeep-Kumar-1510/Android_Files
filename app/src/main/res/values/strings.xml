@@ -151,6 +151,13 @@
     <string name="maps_download_link"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en&gl=US]]></string>
     <string name="edit_details">Edit Details</string>
     <string name="enter_role">Enter Role</string>
-    <string name="check_me">Check me</string>
+    <string name="check_me">A sample Check box. Check it</string>
     <string name="testing_activity">Testing Activity</string>
+    <string name="unit_testing">Unit Testing</string>
+    <string name="espresso_test">Espresso Test</string>
+    <string name="test_page">Test Page</string>
+    <string name="enter_a_url">Enter a URL</string>
+    <string name="validate">Validate</string>
+    <string name="unitTest_explanation">This is an example activity for performing unit testing, Run the UnitTestingTest file in the test area to check whether the functions used in this activity are executed perfectly</string>
+    <string name="espresso_explanation">This is an example activity for Espresso Testing. Run the EspressoTest file in the androidTest package to check if the UI components listed here are working fine</string>
 </resources>

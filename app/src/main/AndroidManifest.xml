@@ -42,7 +42,7 @@
             android:name=".EspressoActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SampleActivity"
+            android:name=".activity.UnitTestActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ProfileActivity"

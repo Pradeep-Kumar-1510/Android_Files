@@ -1,5 +1,6 @@
 package com.example.firstapp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +12,7 @@ import com.example.firstapp.R;
 
 import java.util.regex.Pattern;
 
-public class SampleActivity extends AppCompatActivity {
+public class UnitTestActivity extends AppCompatActivity {
 
     private EditText editTextEmail;
     private EditText editTextUsername;
@@ -22,7 +23,7 @@ public class SampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample);
+        setContentView(R.layout.activity_unit_test);
 
 
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -31,7 +32,17 @@ public class SampleActivity extends AppCompatActivity {
         editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
         editTextUrl = findViewById(R.id.editTextUrl);
         Button btnValidate = findViewById(R.id.btnValidate);
+        Button backButton = findViewById(R.id.backButton);
+        Button clearButton = findViewById(R.id.btnClear);
 
+        backButton.setOnClickListener(v -> {
+
+            Intent intent = new Intent(this, SecondMenuActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "Redirecting",Toast.LENGTH_SHORT).show();
+        });
+
+        clearButton.setOnClickListener(v -> clearFields());
         btnValidate.setOnClickListener(v -> {
 
             String email = editTextEmail.getText().toString();
@@ -47,14 +58,22 @@ public class SampleActivity extends AppCompatActivity {
             boolean isPhoneNumberValid = isPhoneNumberValid(phoneNumber);
             boolean isUrlValid = isUrlValid(url);
 
-            Toast.makeText(SampleActivity.this, "Email Valid: " + isEmailValid, Toast.LENGTH_SHORT).show();
-            Toast.makeText(SampleActivity.this, "Username Valid: " + isUsernameValid, Toast.LENGTH_SHORT).show();
-            Toast.makeText(SampleActivity.this, "Password Valid: " + isPasswordValid, Toast.LENGTH_SHORT).show();
-            Toast.makeText(SampleActivity.this, "Phone Number Valid: " + isPhoneNumberValid, Toast.LENGTH_SHORT).show();
-            Toast.makeText(SampleActivity.this, "URL Valid: " + isUrlValid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UnitTestActivity.this, "Email Valid: " + isEmailValid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UnitTestActivity.this, "Username Valid: " + isUsernameValid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UnitTestActivity.this, "Password Valid: " + isPasswordValid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UnitTestActivity.this, "Phone Number Valid: " + isPhoneNumberValid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UnitTestActivity.this, "URL Valid: " + isUrlValid, Toast.LENGTH_SHORT).show();
         });
     }
 
+    public void clearFields(){
+
+        editTextEmail.setText("");
+        editTextPhoneNumber.setText("");
+        editTextPassword.setText("");
+        editTextUrl.setText("");
+        editTextUsername.setText("");
+    }
     public static boolean isEmailValid(String email) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         return email.matches(emailPattern);
