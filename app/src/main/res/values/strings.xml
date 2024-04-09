@@ -160,4 +160,10 @@
     <string name="validate">Validate</string>
     <string name="unitTest_explanation">This is an example activity for performing unit testing, Run the UnitTestingTest file in the test area to check whether the functions used in this activity are executed perfectly</string>
     <string name="espresso_explanation">This is an example activity for Espresso Testing. Run the EspressoTest file in the androidTest package to check if the UI components listed here are working fine</string>
+    <string name="room_db">Room DataBase Implementation</string>
+    <string name="db_room">Room DB</string>
+    <string name="data">Enter your Data</string>
+    <string name="add_data">Add Data</string>
+    <string name="data_from_database">Viewing Data from Database</string>
+    <string name="no_data">No data available</string>
 </resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image2"
+    tools:context=".roomDB.HomeDbFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="@string/room_db"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_20sp" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:padding="@dimen/_16dp"
+            android:rowCount="3">
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="@dimen/_16dp"
+                android:backgroundTint="@color/buttonbg2"
+                android:text="@string/add_data"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:backgroundTint="@color/buttonbg2"
+                android:text="@string/delete_data"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/btnLoad"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="@dimen/_16dp"
+                android:backgroundTint="@color/buttonbg2"
+                android:text="@string/load"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:backgroundTint="@color/buttonbg2"
+                android:text="@string/update_data"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_250dp"
+            android:backgroundTint="@color/buttonbg2"
+            android:text="@string/go_back"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp" />
+
+    </FrameLayout>
+</ScrollView>

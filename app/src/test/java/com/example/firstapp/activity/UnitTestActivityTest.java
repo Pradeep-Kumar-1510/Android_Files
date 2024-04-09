@@ -3,6 +3,8 @@ package com.example.firstapp.activity;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import com.example.firstapp.testing.UnitTestActivity;
+
 public class UnitTestActivityTest {
 
     @Test

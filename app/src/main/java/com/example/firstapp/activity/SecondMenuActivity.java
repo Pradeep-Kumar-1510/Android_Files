@@ -15,6 +15,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.firstapp.R;
 import com.example.firstapp.broadcastFiles.BroadcastOtpActivity;
 import com.example.firstapp.firebaseNotification.PushNotificationsActivity;
+import com.example.firstapp.roomDB.RoomDatabaseActivity;
+import com.example.firstapp.testing.EspressoActivity;
+import com.example.firstapp.testing.UnitTestActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class SecondMenuActivity extends AppCompatActivity {
@@ -65,7 +68,12 @@ public class SecondMenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(SecondMenuActivity.this, UnitTestActivity.class);
                 startActivity(intent);
                 Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
+            }else if (id == R.id.roomData) {
+                Intent intent = new Intent(SecondMenuActivity.this, RoomDatabaseActivity.class);
+                startActivity(intent);
+                Toast.makeText(SecondMenuActivity.this, "Redirecting", Toast.LENGTH_SHORT).show();
             }
+
 
             drawer.closeDrawer(GravityCompat.START);
             return true;

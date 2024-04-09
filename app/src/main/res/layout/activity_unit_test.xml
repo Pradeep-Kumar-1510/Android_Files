@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgcolor3"
-    tools:context=".activity.UnitTestActivity">
+    tools:context=".testing.UnitTestActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

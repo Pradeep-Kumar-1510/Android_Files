@@ -14,7 +14,7 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.example.firstapp.activity.EspressoActivity;
+import com.example.firstapp.testing.EspressoActivity;
 
 import org.junit.Rule;
 import org.junit.Test;

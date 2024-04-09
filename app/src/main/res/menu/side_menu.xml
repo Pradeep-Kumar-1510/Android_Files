@@ -40,4 +40,17 @@
             </group>
         </menu>
     </item>
+
+    <item android:title="@string/db_room">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/roomData"
+                    android:title="@string/room_db" />
+
+            </group>
+        </menu>
+    </item>
+
+
 </menu>
